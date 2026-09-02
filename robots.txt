@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Stray artefacts in the reports folder, not content
+Disallow: /reports/loading.htm
+
+Sitemap: https://cibdashboard.netlify.app/sitemap.xml
