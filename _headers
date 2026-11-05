@@ -1,0 +1,10 @@
+# Response headers for Cloudflare, matching what netlify.toml sent. HSTS is added
+# here because Cloudflare does not add it. The page itself keeps the host default
+# (revalidate on every visit), so a new build shows up straight away.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+/reports/*
+  Cache-Control: public, max-age=31536000, immutable

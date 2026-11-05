@@ -1,0 +1,13 @@
+// Cloudflare deploy settings: the repository root is served as static files,
+// with no Worker code. Headers come from _headers; .assetsignore keeps git and
+// config files off the site.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cibdashboard",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
