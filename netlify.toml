@@ -1,6 +1,19 @@
 [build]
   publish = "."
 
+# The site lives on Cloudflare at cib.dysinfluence.com. Netlify only redirects.
+# The Search Console file stays here so the old property remains verified.
+[[redirects]]
+  from = "/google0eca4fe1480ce8ef.html"
+  to = "/google0eca4fe1480ce8ef.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "https://cib.dysinfluence.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
